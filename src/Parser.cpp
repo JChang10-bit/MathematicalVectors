@@ -11,8 +11,8 @@
 #include <fstream>
 #include <iostream>
 
-
-void Parser::loadFile(const char* filename) {
+void Parser::loadFile(const char* filename)
+{
     std::ifstream file(filename, std::ifstream::in);
     if (file.fail()) {
         std::cout << "Error: " << strerror(errno) << std::endl;
@@ -23,4 +23,3 @@ void Parser::loadFile(const char* filename) {
     }
     file.close();
 }
-

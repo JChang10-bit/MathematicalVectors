@@ -10,7 +10,9 @@
 #include "../include/Object.h"
 #include "../include/Universe.h"
 
-Object* ObjectFactory::makeObject(std::string name, double mass, const vector2& pos, const vector2& vel) {
+Object* ObjectFactory::makeObject(
+    std::string name, double mass, const vector2& pos, const vector2& vel)
+{
     Object* temp = new Object(name, mass, pos, vel);
     Universe::instance()->addObject(temp);
     return temp;

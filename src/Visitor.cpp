@@ -9,9 +9,12 @@
 #include "Visitor.h"
 #include "Object.h"
 
-PrintVisitor::PrintVisitor(std::ostream& os) : os(os) {}
-
-void PrintVisitor::visit(Object& object) {
-    os << object.getName();
+PrintVisitor::PrintVisitor(std::ostream& os)
+    : os(os)
+{
 }
 
+void PrintVisitor::visit(Object& object)
+{
+    os << object.getName();
+}
