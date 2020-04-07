@@ -22,14 +22,14 @@ case "$KEY" in
         echo "Executing Clang compiled binaries:"
         docker exec -t build cmake -H/repo -B/build \
         && docker exec -t build cmake --build /build \
-        && docker exec -t build /repo/bin/testing
+        && docker exec -tw /repo/bin build /repo/bin/testing
         ;;
 
     gcc)
         echo "Executing GCC compiled binaries:"
         docker exec -t build cmake -H/repo -B/build \
         && docker exec -t build cmake --build /build \
-        && docker exec -t build /repo/bin/testing
+        && docker exec -tw /repo/bin build /repo/bin/testing
         ;;
 
     *)
